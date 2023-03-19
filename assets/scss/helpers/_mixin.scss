@@ -1,0 +1,8 @@
+@import '../helpers/variables';
+
+@mixin text($fz,$fw,$color,$lh){
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+    line-height: $lh;
+}

@@ -1,0 +1,30 @@
+/*
+chứa các variables (biến) chung khai báo
+*/
+
+/*-------- Backroung ---------*/
+$bg-c0-white:#F5F5F5;
+
+
+$bg-c0-dark:#000;
+
+
+/*--------  Text -----*/
+$text-c0-white:#fff;
+
+$text-c0-dark:#000;
+$text-c1-dark:#4d4d4d;
+
+// font-Weight
+$fw-light: 300;
+$fw-normal: 400;
+
+//fontSize
+$fs-base: 16px;
+$fs-2xl: 20px;
+$fs-3xl: 30px;
+$fs-4xl: 40px;
+//light-height khi xuất hiện giá trị mới ở các trang khác thì có thể thêm vào thay đổi (c)
+$lh-c1:19.36px;
+$lh-c2:24.2px;
+$lh-c3:2px;
