@@ -2,3 +2,103 @@
 thêm đường dẫn của các file scss con vào file .css (này) bằng @import
  * Các file phải import theo thứ tự nhất định
 */
+@import '../base/customize';
+@import '../helpers/mixin';
+@import '../helpers/variables';
+
+
+.header {
+    .header-top {
+        background-color: $bg-c0-dark;
+        padding-top: 10px;
+        padding-bottom: 8px;
+
+        .container {
+            .select-list {
+                .shop-cart {
+                    a {
+                        color: $text-c0-white;
+
+                        i {}
+                    }
+
+                    margin-right: 19.82px;
+                }
+
+                .login {
+
+                    a {
+                        // color: $text-c0-white;
+                        // font-weight: $fw-light;
+                        // font-size: $fs-base;
+                        // line-height: $lh-c1;
+                        @include text($fs-base, $fw-light, $text-c0-white, $lh-c1);
+                    }
+
+                    margin-right: 20px;
+                }
+
+                .register {
+                    a {
+                        // color: $text-c0-white;
+                        // font-weight: $fw-light;
+                        // font-size: $fs-base;
+                        // line-height: $lh-c1;
+                        @include text($fs-base, $fw-light, $text-c0-white, $lh-c1);
+                    }
+
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        .container {
+            .nav-list {
+                .menu-list {
+                    padding-left: 0;
+                    padding-top: 16px;
+
+                    li {
+                        margin-right: 25px;
+                        position: relative;
+
+                        a {
+                            @include text ($fs-2xl, $fw-normal, $text-c0-dark, $lh-c2);
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: $lh-c3;
+                                background-color: $bg-c0-dark;
+                                left: 0;
+                                bottom: -4px;
+                                transition: 0.5s;
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            a {
+                                font-weight: $fw-light;
+                                color: $text-c1-dark;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            a {
+                                font-weight: $fw-light;
+                                color: $text-c1-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
