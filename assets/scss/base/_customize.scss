@@ -18,3 +18,29 @@ a {
 li {
     list-style: none;
 }
+//<SidebarJS header>
+.closeBar,.openBar {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  transform: translateY(-50%);
+font-size: 20px;
+  cursor: pointer;
+}
+
+.none{
+    display: none;
+}
+
+.btn_navbar {
+    position: relative;
+    z-index: 10;
+    width: 20%;
+    display: none;
+  }
+
+  .changeBar {
+    transform: translate(2%,16%);
+    display: none;
+  }
+//</SidebarJS header>

@@ -6,7 +6,7 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
 @import '../helpers/mixin';
 @import '../helpers/variables';
 
-
+// header
 .header {
     .header-top {
         background-color: $bg-c0-dark;
@@ -18,8 +18,7 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
                 .shop-cart {
                     a {
                         color: $text-c0-white;
-
-                        i {}
+                        cursor: pointer;
                     }
 
                     margin-right: 19.82px;
@@ -54,14 +53,33 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
 
     .header-bottom {
         .container {
+            .btn_navbar{
+                
+                @media screen and (max-width:576px) {
+                   display: block;
+                   margin-top: 20px;
+                   margin-left: 8px;
+                }
+            }
             .nav-list {
                 .menu-list {
                     padding-left: 0;
                     padding-top: 16px;
 
+                    @media screen and (max-width:576px) {
+                        transform: translate(2%, 16%);
+                        flex-direction: column;
+                        padding-top: 0;
+                    }
+
                     li {
                         margin-right: 25px;
                         position: relative;
+
+                        @media screen and (max-width:576px) {
+                            margin-bottom: 10px;
+
+                        }
 
                         a {
                             @include text ($fs-2xl, $fw-normal, $text-c0-dark, $lh-c2);
@@ -96,9 +114,155 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
                             }
                         }
                     }
+
                 }
+
             }
         }
 
+    }
+}
+
+//Carousel
+.carousel-mine {
+    // background-repeat: no-repeat;
+    // background-position: bottom;
+    // background-size: cover;
+    @include bgIMG(no-repeat, bottom, cover);
+    height: 500px;
+
+    @media screen and (max-width:768px) {
+        height: 800px;
+    }
+
+    .container {
+
+        .carousel {
+            margin-top: 107px;
+            height: 393px;
+
+            @media screen and (max-width:768px) {
+                padding-bottom: 645px;
+            }
+
+            .carousel-indicators [data-bs-target] {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin-left: 23px;
+                margin-right: 17px;
+                color: rgba(0, 0, 0, 0.13);
+                border: 1px solid rgba(0, 0, 0, 0.13);
+            }
+
+            .carousel-inner {
+                overflow: visible;
+
+                .carousel-item {
+                    margin-top: 5px;
+                    margin-left: 86px;
+                    height: 392px;
+                    width: 821px;
+                    transition: 1s;
+                    &:not(.active){
+                        display: none;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        width: 560px;
+                    }
+
+                    @media screen and (max-width:576px) {
+                        width: 440px;
+                        height: 294px;
+                        margin-top: 0px;
+                        margin-left: 15vw;
+
+                    }
+
+                    img {
+                        width: 100%;
+                        transform: translate(-3%, -27%);
+
+                        @media screen and (max-width:768px) {
+                            transform: translate(4%, -27%);
+                        }
+                        @media screen and (max-width:768px) {
+                           width: 97%;
+                           transform: translate(4%, -15%);
+                        }
+                    }
+
+                    .carousel-caption {
+                        transform: translate(252%, -160%);
+                        width: 291px;
+                        text-align: start;
+                        height: 151px;
+                        @media screen and (max-width:768px) {
+                            transform: translate(0, 35%);
+                        }
+
+                        h2 {
+                            @include text ($fs-4xl, $fw-light, $text-c1-dark, $lh-c4);
+                            margin-top: 17px;
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            @include text ($fs-2xl, $fw-light, $text-c1-dark, $lh-c2);
+                        }
+
+                        button {
+                            @include button($fs-2xl, $fw-light, $text-c0-white, $bg-c0-yellow, $bd-c0, 0px, 13px 35px 13px 34px);
+
+                            &:hover {
+                                animation: ani9 0.4s ease-in-out infinite alternate;
+                            }
+                        }
+
+
+                    }
+
+                }
+
+
+
+                .carousel-control-prev,
+                .carousel-control-next {
+                    height: 66.13px;
+                    width: 45.71px;
+                    top: 20%;
+
+                    .carousel-control-prev-icon,
+                    .carousel-control-next-icon {
+                        background-image: url(../../../assets/img/Polygon-prev.png);
+                        opacity: 1;
+                        width: 100%;
+                        height: 100%;
+                        color: rgba(0, 0, 0, 0.24);
+                        border: rgba(0, 0, 0, 0.24);
+                    }
+
+                }
+
+                .carousel-control-next {
+                    .carousel-control-next-icon {
+                        background-image: url(../../../assets/img/Polygon-next.png);
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(5px);
     }
 }
