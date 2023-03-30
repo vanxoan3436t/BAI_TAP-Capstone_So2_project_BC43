@@ -2,3 +2,8 @@
 thêm đường dẫn của các file scss con vào file .css (này) bằng @import
  * Các file phải import theo thứ tự nhất định
 */
+@import '../base/customize';
+@import '../helpers/mixin';
+@import '../helpers/variables';
+// header
+@import '../layouts/header';

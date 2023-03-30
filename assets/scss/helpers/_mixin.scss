@@ -1,6 +1,6 @@
 @import '../helpers/variables';
 
-@mixin text($fz,$fw,$color,$lh){
+@mixin text($fz, $fw, $color, $lh) {
     font-size: $fz;
     font-weight: $fw;
     color: $color;
@@ -8,13 +8,14 @@
 }
 
 //dùng cho phần layout có backround là 1 bức ảnh
-@mixin bgIMG($repeat,$position,$size){
+@mixin bgIMG($repeat, $position, $size) {
     background-repeat: $repeat;
     background-position: $position;
     background-size: $size;
 }
+
 //button 
-@mixin button($fz,$fw,$c,$bg,$bd,$br,$p){
+@mixin button($fz, $fw, $c, $bg, $bd, $br, $p) {
     font-size: $fz;
     font-weight: $fw;
     color: $c;
@@ -25,3 +26,16 @@
     cursor: pointer;
 }
 
+@mixin elementDistance ($mt, $ms, $w, $h) {
+    margin-top: $mt ;
+    margin-left: $ms;
+    width: $w;
+    height: $h;
+}
+
+@mixin elementDiv($d-i-b, $w, $h, $bgcl) {
+    display: $d-i-b;
+    width: $w ;
+    height: $h;
+    background-color: $bgcl ;
+}

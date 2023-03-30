@@ -5,123 +5,8 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
 @import '../base/customize';
 @import '../helpers/mixin';
 @import '../helpers/variables';
-
 // header
-.header {
-    .header-top {
-        background-color: $bg-c0-dark;
-        padding-top: 10px;
-        padding-bottom: 8px;
-
-        .container {
-            .select-list {
-                .shop-cart {
-                    a {
-                        color: $text-c0-white;
-                        cursor: pointer;
-                    }
-
-                    margin-right: 19.82px;
-                }
-
-                .login {
-
-                    a {
-                        // color: $text-c0-white;
-                        // font-weight: $fw-light;
-                        // font-size: $fs-base;
-                        // line-height: $lh-c1;
-                        @include text($fs-base, $fw-light, $text-c0-white, $lh-c1);
-                    }
-
-                    margin-right: 20px;
-                }
-
-                .register {
-                    a {
-                        // color: $text-c0-white;
-                        // font-weight: $fw-light;
-                        // font-size: $fs-base;
-                        // line-height: $lh-c1;
-                        @include text($fs-base, $fw-light, $text-c0-white, $lh-c1);
-                    }
-
-                }
-            }
-        }
-    }
-
-    .header-bottom {
-        .container {
-            .btn_navbar{
-                
-                @media screen and (max-width:576px) {
-                   display: block;
-                   margin-top: 20px;
-                   margin-left: 8px;
-                }
-            }
-            .nav-list {
-                .menu-list {
-                    padding-left: 0;
-                    padding-top: 16px;
-
-                    @media screen and (max-width:576px) {
-                        transform: translate(2%, 16%);
-                        flex-direction: column;
-                        padding-top: 0;
-                    }
-
-                    li {
-                        margin-right: 25px;
-                        position: relative;
-
-                        @media screen and (max-width:576px) {
-                            margin-bottom: 10px;
-
-                        }
-
-                        a {
-                            @include text ($fs-2xl, $fw-normal, $text-c0-dark, $lh-c2);
-
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                width: 0;
-                                height: $lh-c3;
-                                background-color: $bg-c0-dark;
-                                left: 0;
-                                bottom: -4px;
-                                transition: 0.5s;
-                            }
-
-                            &:hover::after {
-                                width: 100%;
-                            }
-                        }
-
-                        &:nth-child(2) {
-                            a {
-                                font-weight: $fw-light;
-                                color: $text-c1-dark;
-                            }
-                        }
-
-                        &:nth-child(3) {
-                            a {
-                                font-weight: $fw-light;
-                                color: $text-c1-dark;
-                            }
-                        }
-                    }
-
-                }
-
-            }
-        }
-
-    }
-}
+@import '../layouts/header';
 
 //Carousel
 .carousel-mine {
@@ -129,7 +14,7 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
     // background-position: bottom;
     // background-size: cover;
     @include bgIMG(no-repeat, bottom, cover);
-    height: 500px;
+    height: 530px;
 
     @media screen and (max-width:768px) {
         height: 800px;
@@ -156,7 +41,6 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
             }
 
             .carousel-inner {
-                overflow: visible;
 
                 .carousel-item {
                     margin-top: 5px;
@@ -164,17 +48,15 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
                     height: 392px;
                     width: 821px;
                     transition: 1s;
-                    &:not(.active){
-                        display: none;
-                    }
 
                     @media screen and (max-width:768px) {
                         width: 560px;
+                        height: 470px;
                     }
 
                     @media screen and (max-width:576px) {
                         width: 440px;
-                        height: 294px;
+                        height: 410px;
                         margin-top: 0px;
                         margin-left: 15vw;
 
@@ -187,9 +69,10 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
                         @media screen and (max-width:768px) {
                             transform: translate(4%, -27%);
                         }
+
                         @media screen and (max-width:768px) {
-                           width: 97%;
-                           transform: translate(4%, -15%);
+                            width: 97%;
+                            transform: translate(4%, -15%);
                         }
                     }
 
@@ -198,8 +81,10 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
                         width: 291px;
                         text-align: start;
                         height: 151px;
+
                         @media screen and (max-width:768px) {
                             transform: translate(0, 35%);
+                            height: 70%;
                         }
 
                         h2 {
@@ -209,18 +94,18 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
                         }
 
                         p {
-                            @include text ($fs-2xl, $fw-light, $text-c1-dark, $lh-c2);
+                            @include text ($fs-2xl, $fw-light, $text-c1-dark, $lh-c2 );
+                            height: 51px;
                         }
 
-                        button {
-                            @include button($fs-2xl, $fw-light, $text-c0-white, $bg-c0-yellow, $bd-c0, 0px, 13px 35px 13px 34px);
+                    }
 
-                            &:hover {
-                                animation: ani9 0.4s ease-in-out infinite alternate;
-                            }
+                    button {
+                        @include button($fs-2xl, $fw-light, $text-c0-white, $bg-c0-yellow, $bd-c0, 0px, 13px 35px 13px 34px);
+
+                        &:hover {
+                            animation: ani9 0.4s ease-in-out infinite alternate;
                         }
-
-
                     }
 
                 }
@@ -256,6 +141,125 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
         }
     }
 }
+
+//- Product Feature -
+.products {
+    margin-top: 30px;
+    height: 1044px;
+
+    .container {
+
+        h1 {
+            @include text ($fs-4xl, $fw-normal, $text-c0-dark, $lh-c4);
+            margin: 16px auto;
+            text-align: center;
+        }
+
+
+        .products_item {
+
+            .card {
+                background: rgba(248, 248, 248, 1);
+                border: none;
+                margin-bottom: 47px;
+                height: 369px;
+                width: 340px; //em để 307 card-footer sao nó rớt xuống 
+
+                img {
+                    @include elementDistance(45px, 57px, 220px, 156px);
+
+                    @media screen and (max-width:767.98px) {
+                        margin-left: 26vw;
+                    }
+
+                    @media screen and (max-width:575.98px) {
+                        margin-left: 22vw;
+                    }
+                }
+
+                @media screen and (max-width:991.98px) {
+                    width: 400px;
+                    margin: 0 0 9vw 3vw;
+                }
+
+                @media screen and (max-width:767.98px) {
+                    width: 632px;
+                    margin: 0 0 11vw 6vw;
+                }
+
+                @media screen and (max-width:575.98px) {
+                    width: 470px;
+                    margin: 0 0 11vw 5.5vw;
+                }
+
+                .card-body {
+                    padding: 0;
+
+                    .card-title {
+                        // cái Adidas Prophere Black White col-4 :số 2 ;chỉnh giống fixma thì nó đè lên nhau à
+                        @include text($fs-24, $fw-light, $text-c0-dark, $lh-c5);
+                        height: 29px;
+                        padding-left: 23px;
+
+                    }
+
+                    .card-text {
+                        @include text($fs-2xl, $fw-light, $text-c2-dark, $lh-c2);
+                        height: 84px;
+                        padding-left: 23px;
+                    }
+                }
+
+                .card-footer {
+                    border: none;
+                    padding: 0;
+                    background-color: $bg-c1-dark;
+
+                    .buy-now {
+                        @include elementDiv(inline-block, 175px, 64px, $bg-c1-yellow);
+                        padding: 17px 27px 18px 39px;
+
+                        @media screen and (max-width:991.98px) {
+                            width: 230px;
+                            padding-left: 70px;
+                        }
+
+                        @media screen and (max-width:767.98px) {
+                            width: 360px;
+                            padding-left: 136px;
+                        }
+
+                        @media screen and (max-width:575.98px) {
+                            width: 270px;
+                            padding-left: 92px;
+                        }
+
+                        a {
+                            @include text($fs-24, $fw-lighter, $text-c0-dark, $lh-c5);
+
+                            &:hover {
+                                font-weight: 700;
+                                transition: .5s;
+                            }
+                        }
+
+                    }
+
+                    .price {
+                        @include elementDiv(inline-block, 160px, 64px, $bg-c1-dark);
+                        @include text($fs-24, $fw-bolder, $text-c0-dark, $lh-c5);
+                        padding: 17px 8px 18px 66px;
+                        text-align: left;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
 
 @keyframes ani9 {
     0% {

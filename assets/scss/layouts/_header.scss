@@ -1,0 +1,128 @@
+// @import '../base/customize';
+// @import '../helpers/mixin';
+// @import '../helpers/variables';
+
+.header {
+    height: 50px;
+
+    .header-top {
+        background-color: $bg-c0-dark;
+        padding-top: 10px;
+        padding-bottom: 8px;
+
+        .container {
+            .select-list {
+                .shop-cart {
+                    button{
+                        background-color:black;
+                        a {
+                         i{
+                            color: $text-c0-white;
+                         }
+                         
+                        }
+                    }
+                    
+                    margin-right: 19.82px;
+                }
+
+                .login {
+
+                    a {
+                        // color: $text-c0-white;
+                        // font-weight: $fw-light;
+                        // font-size: $fs-base;
+                        // line-height: $lh-c1;
+                        @include text($fs-base, $fw-light, $text-c0-white, $lh-c1);
+                    }
+
+                    margin-right: 20px;
+                }
+
+                .register {
+                    a {
+                        // color: $text-c0-white;
+                        // font-weight: $fw-light;
+                        // font-size: $fs-base;
+                        // line-height: $lh-c1;
+                        @include text($fs-base, $fw-light, $text-c0-white, $lh-c1);
+                    }
+
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        .container {
+            .btn_navbar {
+
+                @media screen and (max-width:576px) {
+                    display: block;
+                    margin-top: 20px;
+                    margin-left: 8px;
+                }
+            }
+
+            .nav-list {
+                .menu-list {
+                    padding-left: 0;
+                    padding-top: 16px;
+                    height: 50px;
+
+                    @media screen and (max-width:576px) {
+                        transform: translate(2%, 26%);
+                        flex-direction: column;
+                        padding-top: 0;
+                    }
+
+                    li {
+                        margin-right: 25px;
+                        position: relative;
+
+                        @media screen and (max-width:576px) {
+                            margin-bottom: 10px;
+
+                        }
+
+                        a {
+                            @include text ($fs-2xl, $fw-normal, $text-c0-dark, $lh-c2);
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: $lh-c3;
+                                background-color: $bg-c0-dark;
+                                left: 0;
+                                bottom: -4px;
+                                transition: 0.5s;
+                            }
+
+                            &:hover::after {
+                                width: 100%;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            a {
+                                font-weight: $fw-light;
+                                color: $text-c1-dark;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            a {
+                                font-weight: $fw-light;
+                                color: $text-c1-dark;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}
