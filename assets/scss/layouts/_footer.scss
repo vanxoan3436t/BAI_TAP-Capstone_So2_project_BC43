@@ -1,0 +1,9 @@
+@import '../helpers/mixin';
+.footer{
+    .container{
+        background-image: url(../../../assets/img/img-footer.png);
+        @include bgIMG(no-repeat, bottom, cover);
+        height: 242px;
+    }
+   
+}

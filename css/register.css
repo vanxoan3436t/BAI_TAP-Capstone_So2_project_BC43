@@ -151,3 +151,17 @@ chứa các variables (biến) chung khai báo
   font-weight: 300;
   color: #4d4d4d;
 }
+
+/*
+chứa các variables (biến) chung khai báo
+*/
+/*-------- Backroung ---------*/
+/*----- boder  ----*/
+/*--------  Text -----*/
+.footer .container {
+  background-image: url(../../../assets/img/img-footer.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 242px;
+}

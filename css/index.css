@@ -152,6 +152,145 @@ chứa các variables (biến) chung khai báo
   color: #4d4d4d;
 }
 
+.products {
+  margin-top: 30px;
+  height: auto;
+}
+.products .container h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000;
+  line-height: 48.41px;
+  margin: 16px auto;
+  text-align: center;
+}
+.products .container .products_item .card {
+  background: rgb(248, 248, 248);
+  border: none;
+  margin-bottom: 47px;
+  height: 369px;
+  width: 340px;
+}
+.products .container .products_item .card img {
+  margin-top: 45px;
+  margin-left: 57px;
+  width: 220px;
+  height: 156px;
+}
+@media screen and (max-width: 767.98px) {
+  .products .container .products_item .card img {
+    margin-left: 26vw;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .products .container .products_item .card img {
+    margin-left: 22vw;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .products .container .products_item .card {
+    width: 400px;
+    margin: 0 0 9vw 3vw;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .products .container .products_item .card {
+    width: 632px;
+    margin: 0 0 11vw 6vw;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .products .container .products_item .card {
+    width: 470px;
+    margin: 0 0 11vw 5.5vw;
+  }
+}
+.products .container .products_item .card .card-body {
+  padding: 0;
+}
+.products .container .products_item .card .card-body .card-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
+  line-height: 29.05px;
+  height: 29px;
+  padding-left: 23px;
+}
+.products .container .products_item .card .card-body .card-text {
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(203, 201, 201);
+  line-height: 24.2px;
+  height: 84px;
+  padding-left: 23px;
+}
+.products .container .products_item .card .card-footer {
+  border: none;
+  padding: 0;
+  background-color: rgb(222, 221, 220);
+}
+.products .container .products_item .card .card-footer .buy-now {
+  display: inline-block;
+  width: 175px;
+  height: 64px;
+  background-color: rgb(225, 176, 103);
+  padding: 17px 27px 18px 39px;
+}
+@media screen and (max-width: 991.98px) {
+  .products .container .products_item .card .card-footer .buy-now {
+    width: 230px;
+    padding-left: 70px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .products .container .products_item .card .card-footer .buy-now {
+    width: 360px;
+    padding-left: 136px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .products .container .products_item .card .card-footer .buy-now {
+    width: 270px;
+    padding-left: 92px;
+  }
+}
+.products .container .products_item .card .card-footer .buy-now a {
+  font-size: 24px;
+  font-weight: 200;
+  color: #000;
+  line-height: 29.05px;
+}
+.products .container .products_item .card .card-footer .buy-now a:hover {
+  font-weight: 700;
+  transition: 0.5s;
+}
+.products .container .products_item .card .card-footer .price {
+  display: inline-block;
+  width: 160px;
+  height: 64px;
+  background-color: rgb(222, 221, 220);
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  line-height: 29.05px;
+  padding: 17px 8px 18px 66px;
+  text-align: left;
+}
+
+/*
+chứa các variables (biến) chung khai báo
+*/
+/*-------- Backroung ---------*/
+/*----- boder  ----*/
+/*--------  Text -----*/
+.footer .container {
+  background-image: url(../../../assets/img/img-footer.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 242px;
+}
+
 .carousel-mine {
   background-repeat: no-repeat;
   background-position: bottom;
@@ -276,131 +415,6 @@ chứa các variables (biến) chung khai báo
 }
 .carousel-mine .container .carousel .carousel-inner .carousel-control-next .carousel-control-next-icon {
   background-image: url(../../../assets/img/Polygon-next.png);
-}
-
-.products {
-  margin-top: 30px;
-  height: 1044px;
-}
-.products .container h1 {
-  font-size: 40px;
-  font-weight: 400;
-  color: #000;
-  line-height: 48.41px;
-  margin: 16px auto;
-  text-align: center;
-}
-.products .container .products_item .card {
-  background: rgb(248, 248, 248);
-  border: none;
-  margin-bottom: 47px;
-  height: 369px;
-  width: 340px;
-}
-.products .container .products_item .card img {
-  margin-top: 45px;
-  margin-left: 57px;
-  width: 220px;
-  height: 156px;
-}
-@media screen and (max-width: 767.98px) {
-  .products .container .products_item .card img {
-    margin-left: 26vw;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .products .container .products_item .card img {
-    margin-left: 22vw;
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .products .container .products_item .card {
-    width: 400px;
-    margin: 0 0 9vw 3vw;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .products .container .products_item .card {
-    width: 632px;
-    margin: 0 0 11vw 6vw;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .products .container .products_item .card {
-    width: 470px;
-    margin: 0 0 11vw 5.5vw;
-  }
-}
-.products .container .products_item .card .card-body {
-  padding: 0;
-}
-.products .container .products_item .card .card-body .card-title {
-  font-size: 24px;
-  font-weight: 300;
-  color: #000;
-  line-height: 29.05px;
-  height: 29px;
-  padding-left: 23px;
-}
-.products .container .products_item .card .card-body .card-text {
-  font-size: 20px;
-  font-weight: 300;
-  color: rgb(203, 201, 201);
-  line-height: 24.2px;
-  height: 84px;
-  padding-left: 23px;
-}
-.products .container .products_item .card .card-footer {
-  border: none;
-  padding: 0;
-  background-color: rgb(222, 221, 220);
-}
-.products .container .products_item .card .card-footer .buy-now {
-  display: inline-block;
-  width: 175px;
-  height: 64px;
-  background-color: rgb(225, 176, 103);
-  padding: 17px 27px 18px 39px;
-}
-@media screen and (max-width: 991.98px) {
-  .products .container .products_item .card .card-footer .buy-now {
-    width: 230px;
-    padding-left: 70px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .products .container .products_item .card .card-footer .buy-now {
-    width: 360px;
-    padding-left: 136px;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .products .container .products_item .card .card-footer .buy-now {
-    width: 270px;
-    padding-left: 92px;
-  }
-}
-.products .container .products_item .card .card-footer .buy-now a {
-  font-size: 24px;
-  font-weight: 200;
-  color: #000;
-  line-height: 29.05px;
-}
-.products .container .products_item .card .card-footer .buy-now a:hover {
-  font-weight: 700;
-  transition: 0.5s;
-}
-.products .container .products_item .card .card-footer .price {
-  display: inline-block;
-  width: 160px;
-  height: 64px;
-  background-color: rgb(222, 221, 220);
-  font-size: 24px;
-  font-weight: 600;
-  color: #000;
-  line-height: 29.05px;
-  padding: 17px 8px 18px 66px;
-  text-align: left;
 }
 
 @keyframes ani9 {
