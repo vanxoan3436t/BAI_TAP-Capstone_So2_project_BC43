@@ -7,3 +7,12 @@ thêm đường dẫn của các file scss con vào file .css (này) bằng @imp
 @import '../helpers/variables';
 // header
 @import '../layouts/header';
+@import '../layouts/products';
+@import '../layouts/footer';
+.products-detail {
+    div{
+        img {
+           width: 100px;
+        }
+    }
+}
