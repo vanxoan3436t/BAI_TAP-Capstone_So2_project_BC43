@@ -22,7 +22,7 @@ function getProductDetail() {
                 let arr = res.data.content; // gán dữ liệu từ api về = arr cho nó ngắn + nhìn đỡ rối
                 output +=
                     `
-                    <div>
+                    <div class="d-flex">
                     <div class="proItem-left">
                         <img src="${arr.image}" alt="1">
                     </div>
@@ -34,6 +34,11 @@ function getProductDetail() {
                             ${arr.size}
                         </div>
                         <p>${arr.price}</p>
+                        <div>
+                      <p><span>+</span>1<span>-</span></p>
+                        <button class="btn" onclick="">Add to cart</button>
+                        </div>
+                        
                         <p>Phần add to cart này a làm dc thì làm k thì em làm luôn</p>
                     </div>
         
@@ -49,7 +54,6 @@ function getProductDetail() {
         console.log(err);
     });
 }
-
 window.addEventListener('load', function () {
     getProductDetail();
 
